@@ -1,0 +1,38 @@
+# .gitignore
+
+
+# Virtual environment — never commit this
+.venv/
+venv/
+
+
+# Python bytecode cache
+__pycache__/
+*.pyc
+*.pyo
+
+
+# Environment variables — secrets live here, NEVER commit
+.env
+
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+
+# VS Code workspace settings (optional)
+.vscode/
+
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
+# AWS credentials — critical, never commit
+.aws/
+*.pem
+*.key
+
