@@ -19,5 +19,27 @@ num_tickets = 4
 
 # -- Process --------------------------------------------------------
 total_ticket_price = section_price * num_tickets
-tax_amount = total_ticket_price * 0.0825
-total_with_tax = total_ticket_price + tax_amount
+sales_tax = total_ticket_price * 0.0825
+total_with_tax = total_ticket_price + sales_tax
+
+# -- Output ---------------------------------------------------------
+print()
+print(" *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+print()
+print(f"                      {artist_name}")
+print()
+print("          Date              Time            Venue")
+print("        ---------         ---------        --------")
+print(f"    {concert_date}         {concert_time}        {venue}")
+print()
+print()
+print(f"                           Section: {seat_section}")
+print(f"                 Number of Tickets: {num_tickets}")
+print(f"            Total Ticket Price ($): {total_ticket_price}")  # fix format later
+print(f"                    Tax Amount ($): {sales_tax}")  # fix format later
+print(f"                Total with Tax ($): {total_with_tax}")  # fix format later
+print()
+print("                       Enjoy the Show!")
+print()
+print(" *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*")
+print()
