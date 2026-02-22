@@ -1,7 +1,6 @@
 # -----------------------------------------------------------
 # Tests for MIS5301-PE2a-ConcertTicketGenerator
 # -----------------------------------------------------------
-
 import importlib.util
 import os
 
@@ -10,14 +9,17 @@ _src = os.path.join(
     os.path.dirname(__file__),
     "..",
     "src",
-    "MIS5301-PE2a-ConcertTicketGenerator.py",
+    "MIS5301_PE2a_ConcertTicketGenerator.py",
 )
-_spec = importlib.util.spec_from_file_location("concert_ticket", _src)
+
+_spec = importlib.util.spec_from_file_location(
+    "MIS5301_PE2a_ConcertTicketGenerator", _src
+)
 concert_ticket = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(concert_ticket)
 
 
-class TestCalculateTicketTotal:
+class Test_calculate_ticket_total:
     def test_basic_multiplication(self):
         assert concert_ticket.calculate_ticket_total(40.25, 4) == 161.0
 
@@ -28,7 +30,7 @@ class TestCalculateTicketTotal:
         assert concert_ticket.calculate_ticket_total(40.25, 0) == 0.0
 
 
-class TestCalculateTax:
+class Test_calculate_tax:
     def test_default_tax_rate(self):
         result = concert_ticket.calculate_tax(161.0)
         assert abs(result - 13.2825) < 1e-9
@@ -41,7 +43,7 @@ class TestCalculateTax:
         assert concert_ticket.calculate_tax(0.0) == 0.0
 
 
-class TestCalculateTotalWithTax:
+class Test_calculate_total_with_tax:
     def test_adds_correctly(self):
         result = concert_ticket.calculate_total_with_tax(161.0, 13.2825)
         assert abs(result - 174.2825) < 1e-9
