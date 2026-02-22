@@ -54,7 +54,9 @@ def main():
     print()
     print(f"                           Section: {seat_section}")
     print(f"                 Number of Tickets: {num_tickets}")
-    print(f"            Total Ticket Price ($): {total_ticket_price}")  # fix format later
+    print(
+        f"            Total Ticket Price ($): {total_ticket_price}"
+    )  # fix format later
     print(f"                    Tax Amount ($): {sales_tax}")  # fix format later
     print(f"                Total with Tax ($): {total_with_tax}")  # fix format later
     print()
