@@ -5,7 +5,7 @@
 # File: MIS5301-PE2a-ConcertTicketGenerator.py
 # -----------------------------------------------------------
 
-TAX_RATE = 0.0825
+TAX_RATE = 0.1000
 
 
 def calculate_ticket_total(section_price, num_tickets):
